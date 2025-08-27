@@ -1,1 +1,197 @@
+1. System Monitoring & Performance
 
+CPU Usage:
+
+top – Real-time process and resource usage.
+
+htop – Enhanced process viewer.
+
+sar – Historical resource usage.
+
+
+Memory Usage:
+
+free -h – Memory usage overview.
+
+cat /proc/meminfo – Detailed memory statistics.
+
+
+Disk Usage:
+
+df -h – Disk usage by filesystem.
+
+du -sh <path> – Directory size.
+
+
+Network Usage:
+
+netstat -tuln or ss -tuln – Active connections.
+
+iftop – Real-time bandwidth usage.
+
+ping <IP/hostname> – Connectivity check.
+
+---
+
+2. File and Directory Management
+
+File Management:
+
+ls -lh – List files with details.
+
+cat, less, more – View file content.
+
+find /path -name "*.log" – Search files.
+
+
+Permissions:
+
+chmod 755 <file> – Change file permissions.
+
+chown user:group <file> – Change ownership.
+
+---
+
+3. User and Group Management
+
+Users:
+
+id <username> – User details.
+
+adduser <username> – Add a user.
+
+passwd <username> – Change user password.
+
+
+Groups:
+
+groups <username> – User groups.
+
+usermod -aG <group> <username> – Add user to a group.
+
+Logged-In Users:
+
+who – List logged-in users.
+
+last – Login history.
+
+---
+
+4. Process Management
+
+View Processes:
+
+ps aux – List processes.
+
+pgrep <name> – Search for a process.
+
+
+Manage Processes:
+
+kill -9 <PID> – Kill a process by ID.
+
+pkill <name> – Kill a process by name.
+
+Logs:
+
+journalctl – View system logs.
+
+dmesg – Kernel messages.
+
+tail -f /var/log/<file> – Monitor logs in real-time.
+
+---
+
+5. Networking
+
+Connectivity:
+
+curl -I <url> – Test HTTP connection.
+
+ping <IP/hostname> – Test network.
+
+traceroute <hostname> – Trace network route.
+
+Debugging:
+
+telnet <host> <port> – Test open ports.
+
+dig <hostname> – DNS lookup.
+
+---
+
+6. Disk and Filesystem Management
+
+Filesystem:
+
+fsck /dev/sda1 – Check filesystem.
+
+mount and umount – Mount/unmount filesystems.
+
+Disk Partitioning:
+
+fdisk -l – Partition details.
+
+lsblk – List block devices.
+
+---
+
+7. Package Management
+
+Debian/Ubuntu:
+
+apt update – Update package list.
+
+apt install <package> – Install a package.
+
+RHEL/CentOS:
+
+yum update – Update packages.
+
+yum install <package> – Install a package.
+
+---
+
+8. Backup and Archive
+
+Backup:
+
+rsync -av /source/ /destination/ – Sync files/directories.
+
+Archiving:
+
+tar -cvf archive.tar /path – Archive files.
+
+gzip archive.tar – Compress the archive.
+
+---
+
+10. General Troubleshooting Commands
+
+uptime – System uptime.
+
+uname -a – Kernel and OS details.
+
+tcpdump – Network packet capture.
+
+
+---
+
+End-to-End Troubleshooting Example:
+
+1. Identify the Issue:
+
+Use top, df -h, or ping to gather insights.
+
+
+2. Narrow Down Root Cause:
+
+Use ps aux, netstat, or iotop to trace the issue.
+
+
+3. Apply Fixes:
+
+Restart services or update packages.
+
+
+4. Monitor Post-Fix:
